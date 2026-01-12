@@ -177,7 +177,7 @@ function TodoTableRow({
       }}
     >
       <TableCell className="cursor-pointer">
-        <Checkbox checked={isCurrentComplete} />
+        <Checkbox className="cursor-pointer" checked={isCurrentComplete} />
       </TableCell>
       <TableCell
         className={cn(
