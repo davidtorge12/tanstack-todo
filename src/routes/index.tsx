@@ -28,6 +28,7 @@ import { cn } from '@/lib/utils'
 import { ActionButton } from '@/components/ui/action-button'
 import { todos } from '@/db/schema'
 import { LocalCountButton } from '@/components/local-count-button'
+import { ThemeToggle } from '@/components/theme-toggle'
 
 const serverLoader = createServerFn({ method: 'GET' }).handler(() => {
   return db.query.todos.findMany({
@@ -60,6 +61,7 @@ function App() {
           )}
         </div>
         <div className="flex gap-2">
+          <ThemeToggle />
           <LocalCountButton />
           <Button size="sm" asChild>
             <Link to="/todos/new">
